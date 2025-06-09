@@ -1,6 +1,15 @@
 'use strict';
 
+/** Book - класс со сведениями о книге */
 class Book {
+
+    /**
+     * Конструктор для создания книги
+     * @constructor
+     * @param {string} title - Название книги
+     * @param {number} pubYear - Дата публикации книги  
+     * @param {number} price - Цена продажи
+     */
     constructor(title, pubYear, price) {
         this.title = title;
         this.pubYear = pubYear;
@@ -71,7 +80,11 @@ try {
         books[i].show();
     }
 
-
+    /**
+     * Возвращает true если параметр obj содержит в себе пары ключ/значение
+     * @param {object} obj - любой объект
+     * @returns {boolean} Cодержит ли в себе obj пары ключ/значение
+     */
     function isEmpty(obj) {
         if (typeof obj !== 'object' || obj === null) return true;
 
@@ -86,8 +99,6 @@ try {
 
     console.log("Объект 1", isEmpty(obj1));
     console.log("Объект 2", isEmpty(obj2));
-
-
 
     let classObject = {
         className: "open menu",
@@ -126,7 +137,10 @@ try {
     let object2 = JSON.parse(jsonString);
     console.log('Сравнение объектов из JSON:', JSON.stringify(object2) === JSON.stringify(classObject));
 
-
+    /**
+     * Возвращает кол-во секунд с начала текущего дня
+     * @returns {number} Количество секунд
+     */
     function getSecondsToday() {
         let now = new Date();
         let start = new Date(now.getFullYear(), now.getMonth(), now.getDate());
@@ -135,6 +149,10 @@ try {
 
     console.log("Секунд с начала дня: ", getSecondsToday());
 
+    /**
+     * Возвращает дату в формате ДД.ММ.ГГ
+     * @returns {string} Форматированная строка с датой
+     */
     function formatDate(date) {
         const day = String(date.getDate()).padStart(2, '0');
         const month = String(date.getMonth() + 1).padStart(2, '0');

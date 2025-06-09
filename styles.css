@@ -20,3 +20,26 @@ ul li a {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: x-large;
 }
+
+form {
+    border: 2px solid #3399ff;
+    padding: 16px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button {
+    border: 1px solid white;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #3399ff;
+    color: white;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button:hover {
+    border: 2px solid #3399ff;
+    background-color: white;
+    color: black;
+}
